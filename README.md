@@ -1,4 +1,4 @@
-# Module `fleet_org` 
+# Module `fleet-org` 
 
 This module creates the org folders.
 
