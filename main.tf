@@ -48,24 +48,3 @@ module "level2_folders" {
 #   parent            = each.value
 #   names             = var.org[flatten([for b in module.level2_folders : b.folders])[each.key].display_name]
 # }
-
-##
-#### for_each statement should point to the lowest level module created
-##
-# module "fleet_controlPlane" {
-#   source            = "terraform-google-modules/folders/google"
-#   version           = "3.1.0"
-#   for_each          = {for k, v in flatten([for b in module.level2_folders : b.ids_list] ) : k => v }
-#   parent            = each.value
-#   names             = var.fleet_controlPlaneName
-
-# }
-
-# module "fleet_controlPlane_folders" {
-#   source            = "terraform-google-modules/folders/google"
-#   version           = "3.1.0"
-#   for_each          = {for k, v in flatten([for b in module.fleet_controlPlane : b.ids_list] ) : k => v }
-#   parent            = each.value
-#   names             = var.fleet_controlPlane[flatten([for b in module.fleet_controlPlane : b.folders])[each.key].display_name]
-
-# }

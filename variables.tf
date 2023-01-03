@@ -24,8 +24,8 @@ variable "parent_folder" {
   }
 }
 
-variable "parent_org" {
-  description = "The organization parent for the associated services"
+variable "org_id" {
+  description = "The id of the organization"
   type        = string
 }
 
@@ -34,12 +34,12 @@ variable "org" {
   type = map
 }
 
-variable "fleet_controlPlaneName" {
-  description = "Name of fleet control plane folder"
-  type = list(string)
-}
+# variable "fleet_controlPlaneName" {
+#   description = "Name of fleet control plane folder"
+#   type = list(string)
+# }
 
-variable "fleet_controlPlane" {  
-  description = "Map with a list of folder in control plane folder"
-  type = map
-}
+# variable "fleet_controlPlane" {  
+#   description = "Map with a list of folder in control plane folder"
+#   type = map
+# }

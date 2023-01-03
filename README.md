@@ -4,7 +4,7 @@ This module creates the org folders.
 
 ## Variables
 
-- parent_org (string) => Organiztion ID
+- org_id (string) => Organiztion ID
   format: "organizations/[org_id]"
 
 - parent_folder (string) => Parent folder where all fleet folders will be.
